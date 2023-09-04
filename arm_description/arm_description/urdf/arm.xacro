@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<robot name="arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find arm_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find arm_description)/urdf/arm.trans" />
+<xacro:include filename="$(find arm_description)/urdf/arm.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.09186573896272435 0.1532477520366234 0.4377874269525966" rpy="0 0 0"/>
+    <mass value="1636.3739744565894"/>
+    <inertia ixx="122.622939" iyy="90.404506" izz="140.781728" ixy="4.459364" iyz="-2.366828" ixz="-0.085487"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_1">
+  <inertial>
+    <origin xyz="2.637181544529188e-07 -2.7982934619474875e-07 0.17822374504581118" rpy="0 0 0"/>
+    <mass value="9.950988150450883"/>
+    <inertia ixx="0.073831" iyy="0.088163" izz="0.021803" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07609 0.044498 -0.696099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07609 0.044498 -0.696099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_1">
+  <inertial>
+    <origin xyz="0.0006800464679361934 -0.19580877978424263 -2.7638884736447267e-08" rpy="0 0 0"/>
+    <mass value="15.9214010466006"/>
+    <inertia ixx="0.366386" iyy="0.028315" izz="0.383156" ixy="-0.002119" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07609 0.044498 -0.976099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07609 0.044498 -0.976099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hand_1">
+  <inertial>
+    <origin xyz="0.0020797334823772218 -0.09682060370375006 -2.899267115274995e-08" rpy="0 0 0"/>
+    <mass value="10.006462958116229"/>
+    <inertia ixx="0.106233" iyy="0.009014" izz="0.109481" ixy="-0.002015" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07609 0.444498 -0.976099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/hand_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07609 0.444498 -0.976099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/hand_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="fork__1__1">
+  <inertial>
+    <origin xyz="2.639346036725776e-07 -0.06732423545852884 -1.8723942840637164e-08" rpy="0 0 0"/>
+    <mass value="6.082151308307771"/>
+    <inertia ixx="0.010937" iyy="0.02152" izz="0.02606" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07609 0.734498 -0.976099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/fork__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07609 0.734498 -0.976099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/fork__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="end_effector__1">
+  <inertial>
+    <origin xyz="0.046872575764868946 -0.05916247408180153 -1.5099832162412952e-08" rpy="0 0 0"/>
+    <mass value="6.6528613461497175"/>
+    <inertia ixx="0.056283" iyy="0.006915" izz="0.059529" ixy="0.001231" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.02609 0.844498 -0.976099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/end_effector__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.02609 0.844498 -0.976099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find arm_description)/meshes/end_effector__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="joint_1" type="continuous">
+  <origin xyz="0.07609 -0.044498 0.696099" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="shoulder_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="joint_2" type="continuous">
+  <origin xyz="0.0 0.0 0.28" rpy="0 0 0"/>
+  <parent link="shoulder_1"/>
+  <child link="forearm_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="joint_3" type="continuous">
+  <origin xyz="0.0 -0.4 0.0" rpy="0 0 0"/>
+  <parent link="forearm_1"/>
+  <child link="hand_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="joint_4" type="continuous">
+  <origin xyz="0.0 -0.29 0.0" rpy="0 0 0"/>
+  <parent link="hand_1"/>
+  <child link="fork__1__1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="joint_5" type="continuous">
+  <origin xyz="-0.05 -0.11 0.0" rpy="0 0 0"/>
+  <parent link="fork__1__1"/>
+  <child link="end_effector__1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+</robot>
