@@ -1,0 +1,10 @@
+controller_list:
+  - name: kinematic_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - joint4
+      - joint3
+      - joint2
+      - joint1

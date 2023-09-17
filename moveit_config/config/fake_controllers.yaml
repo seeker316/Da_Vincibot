@@ -1,0 +1,11 @@
+controller_list:
+  - name: fake_kinematic_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint4
+      - joint3
+      - joint2
+      - joint1
+initial:  # Define initial robot poses per group
+  - group: kinematic
+    pose: home
