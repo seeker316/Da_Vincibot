@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+<robot name="vinci" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find vinci_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find vinci_description)/urdf/vinci.trans" />
+<xacro:include filename="$(find vinci_description)/urdf/vinci.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.021518218467853914 0.23351950797477217 0.23670607205875357" rpy="0 0 0"/>
+    <mass value="17.97264000000002"/>
+    <inertia ixx="1.833137" iyy="1.542102" izz="1.955592" ixy="0.030245" iyz="-0.287683" ixz="0.030749"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="foundation__base_1">
+  <inertial>
+    <origin xyz="-0.001888232824595331 0.0011432017738466638 0.20943681365096398" rpy="0 0 0"/>
+    <mass value="920.4727092380526"/>
+    <inertia ixx="48.985183" iyy="41.31025" izz="48.576431" ixy="0.000622" iyz="0.048602" ixz="-0.042143"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0033 0.218673 -0.005643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/foundation__base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0033 0.218673 -0.005643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/foundation__base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="foundation_fork_1">
+  <inertial>
+    <origin xyz="-0.0014671964926098236 -0.03376372718940687 0.027101208060099302" rpy="0 0 0"/>
+    <mass value="2.098305031192791"/>
+    <inertia ixx="0.018488" iyy="0.020902" izz="0.024893" ixy="8.8e-05" iyz="0.001405" ixz="5.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0033 0.068673 -0.646643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/foundation_fork_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0033 0.068673 -0.646643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/foundation_fork_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_1">
+  <inertial>
+    <origin xyz="-0.09540847267472075 0.04056293998704136 0.03597247258900238" rpy="0 0 0"/>
+    <mass value="1.1580779637924898"/>
+    <inertia ixx="0.036195" iyy="0.028689" izz="0.028609" ixy="-0.00031" iyz="-0.017574" ixz="-0.000725"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.093223 0.072385 -0.851643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.093223 0.072385 -0.851643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hand_1">
+  <inertial>
+    <origin xyz="-0.03992368478493042 0.07143853540526318 -0.033703682433203985" rpy="0 0 0"/>
+    <mass value="0.39288844288416375"/>
+    <inertia ixx="0.008986" iyy="0.003142" izz="0.007028" ixy="-0.000242" iyz="0.003845" ixz="0.000159"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.048664 -0.23023 -1.152164" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/hand_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.048664 -0.23023 -1.152164" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/hand_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hand_fork_1">
+  <inertial>
+    <origin xyz="0.001044527118925321 0.025305490978953737 -0.014623183252032379" rpy="0 0 0"/>
+    <mass value="0.19515039122298017"/>
+    <inertia ixx="0.000118" iyy="0.00042" izz="0.000445" ixy="1.3e-05" iyz="2.1e-05" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.019793 -0.56946 -0.957164" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/hand_fork_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.019793 -0.56946 -0.957164" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/hand_fork_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="end_effector_1">
+  <inertial>
+    <origin xyz="-0.021214291377516858 0.048734773258859776 -0.17836473257148278" rpy="0 0 0"/>
+    <mass value="0.5354810781353959"/>
+    <inertia ixx="0.003599" iyy="0.003392" izz="0.000502" ixy="-2e-06" iyz="0.000835" ixz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.046732 -0.615914 -0.92968" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/end_effector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.046732 -0.615914 -0.92968" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vinci_description/meshes/end_effector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="foundation_base" type="fixed">
+  <origin xyz="0.0033 -0.218673 0.005643" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="foundation__base_1"/>
+</joint>
+
+<joint name="foundation_fork" type="continuous">
+  <origin xyz="0.0 0.15 0.641" rpy="0 0 0"/>
+  <parent link="foundation__base_1"/>
+  <child link="foundation_fork_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="fork_forearm" type="revolute">
+  <origin xyz="0.089923 -0.003712 0.205" rpy="0 0 0"/>
+  <parent link="foundation_fork_1"/>
+  <child link="forearm_1"/>
+  <axis xyz="-0.999149 0.041238 -0.0"/>
+  <limit upper="1.396263" lower="-0.174533" effort="100" velocity="100"/>
+</joint>
+
+<joint name="forearm_hand" type="revolute">
+  <origin xyz="-0.044559 0.302615 0.300521" rpy="0 0 0"/>
+  <parent link="forearm_1"/>
+  <child link="hand_1"/>
+  <axis xyz="-0.999149 0.041238 -0.0"/>
+  <limit upper="0.698132" lower="-0.698132" effort="100" velocity="100"/>
+</joint>
+
+<joint name="hand_fork" type="revolute">
+  <origin xyz="-0.028871 0.33923 -0.195" rpy="0 0 0"/>
+  <parent link="hand_1"/>
+  <child link="hand_fork_1"/>
+  <axis xyz="-0.035713 -0.865289 0.5"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="fork_end" type="revolute">
+  <origin xyz="0.026939 0.046454 -0.027484" rpy="0 0 0"/>
+  <parent link="hand_fork_1"/>
+  <child link="end_effector_1"/>
+  <axis xyz="-0.999116 0.042013 0.001343"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+</robot>
