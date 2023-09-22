@@ -1,0 +1,27 @@
+final_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  foundation_base_fork_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: foundation_base_fork
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  hand_fork_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: hand_fork
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  hand_forearm_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: hand_forearm
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  end_fork_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: end_fork
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  forearm_fork_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: forearm_fork
+    pid: {p: 100.0, i: 0.01, d: 10.0}
