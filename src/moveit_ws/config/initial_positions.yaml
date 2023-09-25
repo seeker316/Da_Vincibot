@@ -1,0 +1,8 @@
+# Default initial positions for vinci's ros2_control fake system
+
+initial_positions:
+  forearm_hand: 0
+  fork_end: 0
+  fork_forearm: 0
+  foundation_fork: 0
+  hand_fork: 0
