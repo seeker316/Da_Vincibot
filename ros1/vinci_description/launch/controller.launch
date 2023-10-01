@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find vinci_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="vinci" args="foundation_fork_position_controller fork_forearm_position_controller forearm_hand_position_controller hand_fork_position_controller fork_end_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/vinci/joint_states"/>
+</node>
+
+</launch>
