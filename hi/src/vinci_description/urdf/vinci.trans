@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<robot name="vinci" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="foundation_fork_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="foundation_fork">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="foundation_fork_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="fork_forearm_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="fork_forearm">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="fork_forearm_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="forearm_hand_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="forearm_hand">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="forearm_hand_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="hand_fork_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="hand_fork">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="hand_fork_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="fork_end_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="fork_end">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="fork_end_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

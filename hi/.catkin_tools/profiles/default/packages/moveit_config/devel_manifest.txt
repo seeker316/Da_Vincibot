@@ -1,0 +1,5 @@
+moveit_config
+/home/davincibot/hi/devel/.private/moveit_config/cmake.lock /home/davincibot/hi/devel/./cmake.lock
+/home/davincibot/hi/devel/.private/moveit_config/share/moveit_config/cmake/moveit_configConfig-version.cmake /home/davincibot/hi/devel/share/moveit_config/cmake/moveit_configConfig-version.cmake
+/home/davincibot/hi/devel/.private/moveit_config/share/moveit_config/cmake/moveit_configConfig.cmake /home/davincibot/hi/devel/share/moveit_config/cmake/moveit_configConfig.cmake
+/home/davincibot/hi/devel/.private/moveit_config/lib/pkgconfig/moveit_config.pc /home/davincibot/hi/devel/lib/pkgconfig/moveit_config.pc

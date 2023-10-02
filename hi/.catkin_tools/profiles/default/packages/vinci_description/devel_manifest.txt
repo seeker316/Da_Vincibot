@@ -1,0 +1,5 @@
+vinci_description
+/home/davincibot/hi/devel/.private/vinci_description/cmake.lock /home/davincibot/hi/devel/./cmake.lock
+/home/davincibot/hi/devel/.private/vinci_description/share/vinci_description/cmake/vinci_descriptionConfig-version.cmake /home/davincibot/hi/devel/share/vinci_description/cmake/vinci_descriptionConfig-version.cmake
+/home/davincibot/hi/devel/.private/vinci_description/share/vinci_description/cmake/vinci_descriptionConfig.cmake /home/davincibot/hi/devel/share/vinci_description/cmake/vinci_descriptionConfig.cmake
+/home/davincibot/hi/devel/.private/vinci_description/lib/pkgconfig/vinci_description.pc /home/davincibot/hi/devel/lib/pkgconfig/vinci_description.pc

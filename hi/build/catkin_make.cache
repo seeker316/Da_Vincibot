@@ -1,0 +1,2 @@
+moveit_config:vinci_description:vincicontrol
+-DCATKIN_DEVEL_PREFIX=/home/davincibot/hi/devel -DCMAKE_INSTALL_PREFIX=/home/davincibot/hi/install -G Unix Makefiles

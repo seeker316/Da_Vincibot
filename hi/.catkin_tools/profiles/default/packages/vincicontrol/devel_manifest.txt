@@ -1,0 +1,5 @@
+vincicontrol
+/home/davincibot/hi/devel/.private/vincicontrol/cmake.lock /home/davincibot/hi/devel/./cmake.lock
+/home/davincibot/hi/devel/.private/vincicontrol/share/vincicontrol/cmake/vincicontrolConfig.cmake /home/davincibot/hi/devel/share/vincicontrol/cmake/vincicontrolConfig.cmake
+/home/davincibot/hi/devel/.private/vincicontrol/share/vincicontrol/cmake/vincicontrolConfig-version.cmake /home/davincibot/hi/devel/share/vincicontrol/cmake/vincicontrolConfig-version.cmake
+/home/davincibot/hi/devel/.private/vincicontrol/lib/pkgconfig/vincicontrol.pc /home/davincibot/hi/devel/lib/pkgconfig/vincicontrol.pc
