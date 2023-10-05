@@ -85,6 +85,18 @@ short step_angle(short motor, short angle) {
 }
 
 void control_loop(short setpoint_0, short setpoint_1) {
+  
+current_pos_0 = map(analogRead(A0),0,1023,0,270);
+current_pos_1 = map(analogRead(A1),0,1023,0,270);
+//Serial.println(current_pos_0);
+//Serial.println(current_pos_1);
+
+error_0 = setpoint_0 - current_pos_0;
+error_1 = setpoint_1 - current_pos_1;
+//derivative = error - last_error;
+
+mspeed_0 =((200./270.) * kp * abs(error_0)) + 80;
+mspeed_1 =((200./270.) * kp * abs(error_1)) + 80;
 
 // Shoulder Yaw Joint
 if (error_0 < -5) {
