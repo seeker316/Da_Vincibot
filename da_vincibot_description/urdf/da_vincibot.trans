@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<robot name="da_vincibot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="joint1_shoulder_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint1_shoulder">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint1_shoulder_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="joint2_forearm_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint2_forearm">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint2_forearm_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="joint3_hand_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint3_hand">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint3_hand_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="joint4_handyaw_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint4_handyaw">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint4_handyaw_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="joint5_end_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint5_end">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint5_end_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

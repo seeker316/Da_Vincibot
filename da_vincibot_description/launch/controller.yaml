@@ -1,0 +1,27 @@
+da_vincibot_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  joint1_shoulder_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint1_shoulder
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint2_forearm_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint2_forearm
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint3_hand_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint3_hand
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint4_handyaw_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint4_handyaw
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint5_end_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint5_end
+    pid: {p: 100.0, i: 0.01, d: 10.0}

@@ -1,0 +1,227 @@
+<?xml version="1.0" ?>
+<robot name="da_vincibot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find da_vincibot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find da_vincibot_description)/urdf/da_vincibot.trans" />
+<xacro:include filename="$(find da_vincibot_description)/urdf/da_vincibot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.013780680089318771 0.29685490907620005 0.1796297335203369" rpy="0 0 0"/>
+    <mass value="35.9352"/>
+    <inertia ixx="3.30678" iyy="3.232001" izz="3.200963" ixy="0.006439" iyz="-0.268124" ixz="0.135672"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arducam_v1_1">
+  <inertial>
+    <origin xyz="0.14958686829748946 0.00041841679008441934 -0.0021523835366652477" rpy="0 0 0"/>
+    <mass value="0.0047707963267949235"/>
+    <inertia ixx="0.0" iyy="0.0" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.159174 -0.339163 -1.41" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/arducam_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.159174 -0.339163 -1.41" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/arducam_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="foundation_base_1">
+  <inertial>
+    <origin xyz="0.009586868297954467 -0.04216855497473093 0.47160422842803107" rpy="0 0 0"/>
+    <mass value="118.48330496102017"/>
+    <inertia ixx="13.892787" iyy="13.72668" izz="10.409594" ixy="-0.0" iyz="-0.004549" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.019174 0.220837 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/foundation_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.019174 0.220837 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/foundation_base_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_1">
+  <inertial>
+    <origin xyz="0.005405372319980582 0.041829381974803626 0.03665084928055473" rpy="0 0 0"/>
+    <mass value="12.004176876206436"/>
+    <inertia ixx="0.110864" iyy="0.131332" izz="0.147792" ixy="0.00269" iyz="-0.00568" ixz="-0.000734"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.009587 0.110419 -0.661" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.009587 0.110419 -0.661" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_1">
+  <inertial>
+    <origin xyz="-0.08316200453723323 0.0587075718484109 0.0004308283777266775" rpy="0 0 0"/>
+    <mass value="3.191348499369228"/>
+    <inertia ixx="0.098878" iyy="0.031307" izz="0.127393" ixy="-0.008881" iyz="9.1e-05" ixz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.079671 0.121953 -0.8545" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.079671 0.121953 -0.8545" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hand_1">
+  <inertial>
+    <origin xyz="-0.04175972614489342 0.011082267709544569 -0.07871269739883513" rpy="0 0 0"/>
+    <mass value="1.0665942147498997"/>
+    <inertia ixx="0.024809" iyy="0.025832" izz="0.002087" ixy="0.000134" iyz="-0.000643" ixz="-8.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.083911 -0.300991 -0.8545" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/hand_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.083911 -0.300991 -0.8545" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/hand_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hand_yaw_1">
+  <inertial>
+    <origin xyz="-2.875564365720229e-07 1.8486228126057824e-07 -0.030712893727246893" rpy="0 0 0"/>
+    <mass value="0.19279513921054878"/>
+    <inertia ixx="0.000118" iyy="0.000447" izz="0.000408" ixy="4.4e-05" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.041429 -0.306481 -0.4645" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/hand_yaw_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.041429 -0.306481 -0.4645" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/hand_yaw_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="end_effector_1">
+  <inertial>
+    <origin xyz="-0.02781603508937032 -0.003087956857066254 -0.1611964417463558" rpy="0 0 0"/>
+    <mass value="0.49047145154717503"/>
+    <inertia ixx="0.001938" iyy="0.001952" izz="0.000279" ixy="2e-06" iyz="-6.8e-05" ixz="-1.1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.066218 -0.303239 -0.4086" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/end_effector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.066218 -0.303239 -0.4086" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://da_vincibot_description/meshes/end_effector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rigid1" type="fixed">
+  <origin xyz="-0.159174 0.339163 1.41" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arducam_v1_1"/>
+</joint>
+
+<joint name="rigid2" type="fixed">
+  <origin xyz="-0.019174 -0.220837 0.01" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="foundation_base_1"/>
+</joint>
+
+<joint name="joint1_shoulder" type="revolute">
+  <origin xyz="0.009587 0.110418 0.651" rpy="0 0 0"/>
+  <parent link="foundation_base_1"/>
+  <child link="shoulder_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit upper="4.712389" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="joint2_forearm" type="revolute">
+  <origin xyz="0.089258 -0.011534 0.1935" rpy="0 0 0"/>
+  <parent link="shoulder_1"/>
+  <child link="forearm_1"/>
+  <axis xyz="-0.991753 0.128163 0.0"/>
+  <limit upper="2.094395" lower="-0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="joint3_hand" type="revolute">
+  <origin xyz="0.00424 0.422944 0.0" rpy="0 0 0"/>
+  <parent link="forearm_1"/>
+  <child link="hand_1"/>
+  <axis xyz="-0.991753 0.128163 0.0"/>
+  <limit upper="1.396263" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="joint4_handyaw" type="revolute">
+  <origin xyz="-0.042482 0.00549 -0.39" rpy="0 0 0"/>
+  <parent link="hand_1"/>
+  <child link="hand_yaw_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit upper="3.141593" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="joint5_end" type="revolute">
+  <origin xyz="0.024789 -0.003242 -0.0559" rpy="0 0 0"/>
+  <parent link="hand_yaw_1"/>
+  <child link="end_effector_1"/>
+  <axis xyz="-0.991553 0.129701 -0.0"/>
+  <limit upper="3.141593" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+</robot>
